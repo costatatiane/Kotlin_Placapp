@@ -1,11 +1,14 @@
 package com.example.placapp.ui.score
 
+import android.content.Context
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.placapp.ui.customViews.MyChronometer
 
 class ScoreViewModel : ViewModel() {
     val goalHome = MutableLiveData<Int>()
     val goalAway = MutableLiveData<Int>()
+
     init {
         initGame()
     }

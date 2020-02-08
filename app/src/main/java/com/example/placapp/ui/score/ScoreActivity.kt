@@ -26,7 +26,10 @@ class ScoreActivity : AppCompatActivity() {
     private fun registerListener() {
         btGoalHome.setOnClickListener { scoreViewModel.goalHome() }
         btAwayGoal.setOnClickListener { scoreViewModel.goalAway() }
-        btRestart.setOnClickListener { scoreViewModel.restartGame() }
+        btRestart.setOnClickListener {
+            scoreViewModel.restartGame()
+            chronometer.restart()
+        }
         btEndGame.setOnClickListener { finish() }
         btStartGame.setOnClickListener {
             if (chronometer.isRunning) {
