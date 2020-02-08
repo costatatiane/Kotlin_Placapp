@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name" translatable="false">@string/main_title</string>
+    <string name="main_title" translatable="false">placapp</string>
+    <string name="main_subtitle" translatable="false">Turn your games into unforgettable moments.</string>
+    <string name="button_new_game" translatable="false">New Game</string>
+    <string name="button_exit" translatable="false">Exit</string>
+    <string name="developed_by" translatable="false">Desenvolvido por mim</string>
+    <string name="label_goal" translatable="false">Goal</string>
+    <string name="label_restart" translatable="false">Restart Game</string>
+    <string name="label_end_game" translatable="false">End Game</string>
+    <string name="label_home" translatable="false">Home</string>
+    <string name="label_away" translatable="false">Away</string>
+    <string name="label_event_name" translatable="false">Event Name</string>
+    <string name="label_event_title" translatable="false">Let\'s start!</string>
+    <string name="label_event_subtitle" translatable="false">" What is the name of the event?"</string>
+    <string name="hint_event" translatable="false">Ex: 2019 Club World Cup Final</string>
+    <string name="label_home_title" translatable="false">Time da casa!</string>
+    <string name="label_home_subtitle" translatable="false">What is the home team?</string>
+    <string name="label_hint_home" translatable="false">Ex.: Palmeiras</string>
+    <string name="label_away_subtitle" translatable="false">What is the away team?</string>
+    <string name="hint_away" translatable="false">Ex.: Liverpool</string>
+    <string name="label_start_game" translatable="false">Start Game</string>
+    <string name="label_away_title" translatable="false">Away team!</string>
+    <string name="label_next" translatable="false">Next</string>
+
+</resources>

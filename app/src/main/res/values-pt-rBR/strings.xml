@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name" translatable="false">@string/main_title</string>
+    <string name="main_title" translatable="false">placapp</string>
+    <string name="main_subtitle">Transforme seus jogos em momentos inesquecíveis.</string>
+    <string name="button_new_game" translatable="false">Novo jogo</string>
+    <string name="button_exit" translatable="false">Fechar</string>
+    <string name="label_goal">Gol</string>
+    <string name="label_restart">Reiniciar jogo</string>
+    <string name="label_end_game">Finalizar jogo</string>
+    <string name="label_home">Casa</string>
+    <string name="label_away">Fora</string>
+    <string name="label_event_name">Nome do evento</string>
+    <string name="label_event_title">Vamos começar!</string>
+    <string name="label_event_subtitle">"Qual o nome do jogo?"</string>
+    <string name="hint_event">Ex: Final da copa do mundo de 2019</string>
+    <string name="label_home_title">Time da casa!</string>
+    <string name="label_home_subtitle">Qual o time da casa?</string>
+    <string name="label_hint_home">Ex.: Palmeiras</string>
+    <string name="label_away_subtitle">Qual o time de fora?</string>
+    <string name="hint_away">Ex.: Liverpool</string>
+    <string name="label_start_game">Começar jogo</string>
+    <string name="label_away_title">Time de fora!</string>
+    <string name="label_next">Próximo</string>
+
+</resources>
