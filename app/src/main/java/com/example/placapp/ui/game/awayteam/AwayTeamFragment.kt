@@ -9,19 +9,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.example.placapp.R
+import com.example.placapp.ui.extensions.setupClearButtonWithAction
 
 import com.example.placapp.ui.score.ScoreActivity
 import kotlinx.android.synthetic.main.fragment_away_team.*
+import kotlinx.android.synthetic.main.fragment_away_team.btNextStep
+import kotlinx.android.synthetic.main.fragment_event.*
+import kotlinx.android.synthetic.main.fragment_home_team.*
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- *
- */
 class AwayTeamFragment : Fragment() {
 
     override fun onCreateView(
@@ -33,6 +28,7 @@ class AwayTeamFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        inputAwayTeam.setupClearButtonWithAction()
         btNextStep.setOnClickListener {
             sendHomeTeamName()
         }
