@@ -36,7 +36,7 @@
             app:layout_constraintStart_toStartOf="@+id/textView2"
             app:layout_constraintEnd_toEndOf="@+id/textView2"/>
 
-    <Button
+    <Button android:textSize="@dimen/text_button_font_size"
             style="@style/custom_button"
             android:text="@string/label_next"
             android:id="@+id/btNextStep"

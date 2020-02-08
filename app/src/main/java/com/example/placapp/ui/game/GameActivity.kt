@@ -17,7 +17,14 @@ import com.example.placapp.ui.game.hometeam.HomeTeamFragment
 import com.example.placapp.ui.score.ScoreActivity
 import kotlinx.android.synthetic.main.activity_game.*
 
-class GameActivity : AppCompatActivity() {
+class GameActivity : AppCompatActivity(), AwayTeamFragment.AwayTeamSelectedListener {
+
+    // através da interface, implementa aquela função do fragmento e recebe aqui
+    override fun onAwayTeam(awayTeam: String) {
+        gameViewModel.awayTeam = awayTeam
+        showScoreActivity()
+    }
+
     private var eventName = ""
     private var homeTeam = ""
     private var awayTeam = ""
@@ -26,7 +33,8 @@ class GameActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game)
-        //mantenha o código dos slides anteriores adicionar a linha abaixo
+
+        //registerBroadcastReceiver: quem vai controlar quais são os fragments que serão mostrados em tela
         registerBroadcastReceiver()
         showEventFragment()
         initViewModel()
@@ -42,6 +50,7 @@ class GameActivity : AppCompatActivity() {
     }
 
     private fun registerBroadcastReceiver() {
+        // se registra pra receber actions (eventos) quando elas acontecem
         val intentFilter = IntentFilter("FILTER_EVENT")
         intentFilter.addAction("FILTER_HOME_TEAM")
         intentFilter.addAction("FILTER_AWAY_TEAM")
@@ -49,6 +58,7 @@ class GameActivity : AppCompatActivity() {
     }
     public override fun onDestroy() {
         super.onDestroy()
+        // tira o registro para não receber mais infos quado destruída
         LocalBroadcastManager.getInstance(this).unregisterReceiver(mMessageReceiver)
     }
     private val mMessageReceiver = object : BroadcastReceiver() {
@@ -71,7 +81,9 @@ class GameActivity : AppCompatActivity() {
         nextFragment(HomeTeamFragment())
     }
     private fun showAwayTeamFragment() {
-        nextFragment(AwayTeamFragment())
+        // manda um novo parâmetro pego do fragment anterior para o próximo fragment
+        // também poderia ser resolvido por interface, semelhante ao delegate iOS
+        nextFragment(AwayTeamFragment.newInstance(gameViewModel.homeTeam))
     }
     private fun nextFragment(fragment: Fragment) {
         val ft = supportFragmentManager?.beginTransaction()

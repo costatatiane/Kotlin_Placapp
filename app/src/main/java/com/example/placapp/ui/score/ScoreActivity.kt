@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.placapp.R
+import com.example.placapp.ui.customViews.MyChronometer
 import kotlinx.android.synthetic.main.activity_score.*
 
 class ScoreActivity : AppCompatActivity() {
@@ -27,6 +28,15 @@ class ScoreActivity : AppCompatActivity() {
         btAwayGoal.setOnClickListener { scoreViewModel.goalAway() }
         btRestart.setOnClickListener { scoreViewModel.restartGame() }
         btEndGame.setOnClickListener { finish() }
+        btStartGame.setOnClickListener {
+            if (chronometer.isRunning) {
+                btStartGame.text = "Iniciar cronômetro"
+                chronometer.stop()
+            } else {
+                btStartGame.text = "Parar cronômetro"
+                chronometer.start()
+            }
+        }
     }
     private fun initViewModel() {
         scoreViewModel = ViewModelProviders.of(this).get(ScoreViewModel::class.java)

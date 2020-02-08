@@ -4,7 +4,7 @@
     <string name="main_subtitle" translatable="false">Turn your games into unforgettable moments.</string>
     <string name="button_new_game" translatable="false">New Game</string>
     <string name="button_exit" translatable="false">Exit</string>
-    <string name="developed_by" translatable="false">Desenvolvido por mim</string>
+    <string name="developed_by" translatable="false">Developed by me</string>
     <string name="label_goal" translatable="false">Goal</string>
     <string name="label_restart" translatable="false">Restart Game</string>
     <string name="label_end_game" translatable="false">End Game</string>
